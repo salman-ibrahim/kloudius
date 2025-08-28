@@ -48,6 +48,8 @@ Check out the [demo video](#demo-video) and [screenshots](#screenshots) to see t
 - Yup for validation
 - NativeWind (Tailwind CSS for React Native)
 - Expo Vector Icons
+- Jest for testing
+- React Testing Library
 
 ## Setup Instructions
 
@@ -98,6 +100,12 @@ kloudius/
 │   ├── login.tsx            # Login screen
 │   ├── signup.tsx           # Signup screen
 │   └── welcome.tsx          # Welcome screen
+├── __tests__/               # Test files
+│   ├── context/             # Context tests
+│   ├── navigation/          # Navigation tests
+│   └── screens/             # Screen component tests
+├── .github/                 # GitHub configuration
+│   └── workflows/           # GitHub Actions workflows
 ├── App.tsx                  # Main app component
 ├── app.json                 # Expo configuration
 └── package.json             # Project dependencies
@@ -116,6 +124,22 @@ kloudius/
    - Authentication state is persisted in AsyncStorage
    - User is redirected to Home screen
 5. **Logout**: Clears authentication data and redirects to Login screen
+
+## Testing
+
+The application includes comprehensive tests using Jest and React Testing Library:
+
+### Running Tests
+
+To run the tests:
+
+```bash
+npm test
+```
+
+### Continuous Integration
+
+Tests are automatically run on GitHub using GitHub Actions workflow whenever code is pushed to the main branch or when pull requests are created.
 
 ## Demo Video
 
